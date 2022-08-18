@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body{
+    background-image: url(images/BG.png);
+    padding-bottom: 10px;
+    height: 100%;
+    background-position: center;
+  }
+
+  .main_signup_container{
+    background-image: url(images/BG.png);
+  }
+
+  p{
+    color: white;
+    text-decoration: none;
+  }
+  
+  .container1{
+    text-align: center; 
+    padding-bottom: 20px;
+  }
+  
+  .container1binner{
+    display: flex;
+  }
+  
+  .container1binner p{
+    margin-right: 40px;
+    cursor: pointer;
+    padding-bottom: 20px;
+    color: white;
+  }
+  
+  .container1b{
+    display: flex;
+    font-size: 1.3rem;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+  }
+  
+  .container1c{
+     /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  img{
+    margin-top: -20px;
+    width: 150px;
+    padding-bottom: 20px;
+  }
+  
+  form{
+    width: 600px;
+    height: 680px;
+    margin: auto;
+    font-size: 1rem;
+    background-color: white;
+    padding: 30px 60px;
+    border-radius: 10px;
+  }
+  
+  .formsignup{
+    width: 600px;
+    height: 100%;
+    margin: auto;
+    font-size: 1rem;
+    background-color: white;
+    padding: 30px 60px;
+    border-radius: 10px;
+  }
+  
+  .remembersetion{
+    display: flex;
+    width: 480px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .text-center{
+    padding-top: 20px;
+  }
+  
+  .formheader{
+    font-size: 2rem;
+  }
+  
+  .btn-primary{
+    width: 480px;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    background-color: #0A2472;
+  }
+  
+  .schoolid{
+    padding: 5px ;
+    border-radius: 10px;
+    width: 480px;
+    background-color: #0A2472;
+    color: white;
+    text-align: center;
+    height: 50px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    border: solid 1px white;
+  }
+  
+  /* .schoolid img{
+    width: 10px;;
+  } */
+  
+  .schoolemail{
+    padding: 20px;
+    border-radius: 10px;
+    border: solid 1px grey;
+  }
+  
+  /* .uploadedvideos{
+    background-color: white;
+  } */
+  
+  
+  
+  @media only screen and (max-width: 640px) {
+    body{
+       background-image: none;
+       width: 150%;
+    }
+  
+    .container1b{
+      padding-left: 20px;
+    }
+   
+  }
+  
+  

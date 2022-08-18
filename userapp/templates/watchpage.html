@@ -1,0 +1,54 @@
+{% extends 'main.html' %}
+<!-- <html>
+  <body>
+    <p>Welcome To The Home Page</p>
+    <a href="{%url 'Home'%}">Return To The Sign Up Page</a>
+    <p>
+      Do not ve an account yet? <a href="{%url 'Signup'%}">click here</a> to
+      signup
+    </p>
+  </body>
+</html> -->
+{% load static %}
+{% block Links %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/watchpage.css' %}" />
+{% endblock  %}
+
+{% block content %}
+
+
+<main id="watch-main" class="ms-4 me-5">
+    <nav class="navbar navbar-expand-sm navbar-dark d-flex">
+        <div class="input-group md-form form-lg form-2 w-50 justify-content-center align-items-center container-fluid">
+            <input class="form-control my-5 py-3 amber-border" type="text" placeholder="Search" id="navbar-search-input" aria-label="Search">
+            <span class="input-group-append">
+                <button class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5" type="button">
+                    <i class="fa fa-search"></i>
+                </button>
+            </span>
+        </div>
+    </nav>
+
+    <section id="watch-category">
+        <div class="d-flex align-content-md-between flex-wrap">
+            <button type="button" class="btn btn-outline-secondary mx-3 rounded-pill px-3 active">All</button>
+            <button type="button" class="btn btn-outline-secondary mx-2 rounded-pill px-3">Live</button>
+            <button type="button" class="btn btn-outline-secondary mx-2 rounded-pill">Convocation</button>
+            <button type="button" class="btn btn-outline-secondary mx-2 rounded-pill">Drama</button>
+            <button type="button" class="btn btn-outline-secondary mx-2 rounded-pill">Dance</button>
+            <button type="button" class="btn btn-outline-secondary mx-2 rounded-pill">Matriculations</button>
+            <button type="button" class="btn btn-outline-secondary mx-2 rounded-pill">School tours</button>
+            <button type="button" class="btn btn-outline-secondary mx-2 rounded-pill">Frienships</button>
+            <button type="button" class="btn btn-outline-secondary mx-2 rounded-pill">Roommates</button>
+            <button type="button" class="btn btn-outline-secondary mx-2 rounded-pill">Classes</button>
+            <button type="button" class="btn btn-outline-secondary mx-2 rounded-pill">Yoruba</button>
+        </div>
+
+    </section>
+
+</main>
+
+
+
+
+{% endblock content %}

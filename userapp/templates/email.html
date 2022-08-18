@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Confirmation</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel='stylesheet' href='{% static 'styles/stylesheet1.css' %}'
+    type='text/css' type='text/css'> {% load static %}
+  </head>
+  <body>
+    <div class="container py-5">
+        <div class="container1b">
+            <div>
+                <img
+                src="{% static 'images/Frame 2.png' %}"
+                alt="Kampus Konnect Logo"
+                />
+            </div>
+            <div class="container1binner">
+                <p>
+					<a href="{% url 'Home'%}" style="color: white; text-decoration: none"
+						>Home</a
+					>
+				</p>
+				<p>
+					<a href="{% url 'comment'%}" style="color: white; text-decoration: none"
+						>Contact us</a
+					>
+				</p>
+            </div>
+        </div>
+      <form method="POST" action="">
+        {% comment %} {{% url 'mail.google.com' %}} {% endcomment %}
+        <div class="container1">
+          <h1 class="formheader"> Hi {{ user.username }}!, Kindly Confirm Your Email Address</h1>
+        </div>
+        <div id="flash">
+            <p style="color: black">
+                Dear {{user.username}}, please go to you email, {{user.email}}, inbox and click on the
+                sent activation link to confirm and complete the registration. <br>
+                <strong>Note: Do Check your mail spam folder.</strong>
+            </p>
+           
+        {% comment %} <a href="{% url 'google.com' %}">Go To Gmail</a> {% endcomment %}
+        <button class="btn btn-primary" type="submit">Go To Gmail</button
+        ><br />
+      </form>
+    </div>
+  </body>
+</html>

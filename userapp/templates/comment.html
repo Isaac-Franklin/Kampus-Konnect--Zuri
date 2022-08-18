@@ -1,0 +1,50 @@
+<!-- @format -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Comment</title>
+		<!-- CSS only -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+			crossorigin="anonymous"
+		/>
+		<link rel='stylesheet' href='{% static 'styles/stylesheet1.css' %}'
+		type='text/css' type='text/css'> {% load static %}
+	</head>
+
+	<div class="container1b" style="padding: 50px">
+		<div>
+			<a href="{% url 'Home'%}"
+				><img
+					src="{% static 'styles/images/Frame 2.png' %}"
+					alt="Kampus Konnect Logo"
+			/></a>
+		</div>
+		<div class="container1binner">
+			<p>
+				<a href="{% url 'Home'%}" style="color: white; text-decoration: none"
+					>Home</a
+				>
+			</p>
+			<p>
+				<a href="{% url 'comment'%}" style="color: blue; text-decoration: none"
+					>Contact us</a
+				>
+			</p>
+		</div>
+	</div>
+	<div class="container py-5">
+		<form method="POST" action="#" style="background-color: #fff">
+			<h1 style="text-align: center">Leave A Comment</h1>
+			{% csrf_token %} {{ comment_form.as_p }}
+			<button class="btn btn-primary" type="submit">Comment</button>
+		</form>
+	</div>
+</html>

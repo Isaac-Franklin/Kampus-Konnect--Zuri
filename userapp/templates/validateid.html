@@ -1,0 +1,63 @@
+<!-- @format -->
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>KK- Validate User</title>
+		<!-- CSS only -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<link rel='stylesheet' href='{% static 'styles/stylesheet1.css' %}'
+		type='text/css' type='text/css'> {% load static %} {% load static %}
+	</head>
+	<body>
+		<div
+			class="container1b"
+			style="padding-top: 40px; width: 80%; margin: auto"
+		>
+			<div>
+				<img
+					src="{% static 'styles/images/Frame 2.png' %}"
+					alt="Kampus Konnect Logo"
+				/>
+			</div>
+			<div class="container1binner">
+				<p>
+					<a href="{% url 'Home'%}" style="color: white; text-decoration: none"
+						>Home</a
+					>
+				</p>
+				<p>
+					<a
+						href="{% url 'comment'%}"
+						style="color: white; text-decoration: none"
+						>Contact us</a
+					>
+				</p>
+			</div>
+		</div>
+		<form method="POST" enctype="multipart/form-data">
+			<div class="container1">
+				<p style="color: black">
+					Hi {{ user.username }}!, One More Verification Step!
+				</p>
+				<h1 class="formheader">Identity Verification Stage 2</h1>
+			</div>
+			{% csrf_token %} {{ ValidateForm.as_p }} {{ form.errors }}
+			<button class="btn btn-primary" type="submit">Continue</button><br />
+			{% if messages %} {% for message in messages %}
+			<div class="alert alert-{{ message.tags}} m-0" role="alert">
+				<strong>{{ message }}</strong>
+			</div>
+			{% endfor %} {% endif %}
+		</form>
+	</body>
+</html>

@@ -1,0 +1,68 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="C:\Users\kk\Desktop\kk-platform\static\styles\loginstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>login2</title>
+    <link rel="stylesheet" href="{% static 'styles/loginstyle.css' %}" />
+</head>
+<body>
+    <div class="bgimage"><br>
+        <nav class="navbar">
+          <ul class="nav-list">
+            <li class="list-item">
+                <a class="navind" href="#">Home</a>
+            </li>
+            <li class="list-item">
+                <a class="navind" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+        
+        <div class="center-container">
+            <div class="second-center-container">
+            <div class="welcome">Welcome back!</div>
+            <div class="form">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="emailad" placeholder="   Jandedoe@gmail.com">
+                <label for="email">Password</label>
+                <input type="text" id="password" name="pass" placeholder="   minimum of 8 Characters">
+                <i class="far fa-eye" id="togglePassword" style="cursor: pointer;"></i>
+            </div>
+            <div class="middlediv">
+                <div class="innermiddlediv">
+                <input type="checkbox" id="html" name="fav_language" value="HTML">
+                <label for="Remember">Remember me</label><br>
+                </div>
+                <div>
+                    <nav><a class="forgotpassword" href="#">Forgot password?</a></nav>
+                </div>
+            </div>
+            <div class="lowerdiv">
+                <nav class="navbtn1"><button class="loginbtn">Log In</button></nav><br>
+                
+                <p class="or">Or</p>
+                <div class="lowerdiv1">
+                    <div class="innerlowerdiv1">
+                        <nav><button class="buttonnav" id="buttonnavgoogle"><img class="googleimg" src="images/google-logo-history-png-2598.png" alt=""> Log in with Google</button></nav>
+                    </div>
+                    <div class="innerlowerdiv2">
+                        <nav><button class="buttonnav" id="buttonnavfacebook"><img class="googleimg" src="images/Facebook_logo_PNG12.png" alt="">Log in with Facebook</button></nav>
+                    </div>
+                </div>
+                <div class="lowerdiv2"> Don't have an account yet?
+                    <nav class="signup"><a class="signuplink" href="#">Signup</a></nav></p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src='main.js'></script>
+</body>
+</html>

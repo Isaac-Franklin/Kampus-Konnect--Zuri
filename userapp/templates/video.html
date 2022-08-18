@@ -1,0 +1,77 @@
+<!-- @format -->
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Video Upload</title>
+		<!-- CSS only -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<div class="container py-5">
+			<div class="container1b">
+				<div>
+					<img
+						src="{% static 'images/Frame 2.png' %}"
+						alt="Kampus Konnect Logo"
+					/>
+				</div>
+				<div class="container1binner">
+					<p>
+						<a
+							href="{% url 'Home'%}"
+							style="color: white; text-decoration: none"
+							>Home</a
+						>
+					</p>
+					<p>
+						<a
+							href="{% url 'comment'%}"
+							style="color: white; text-decoration: none"
+							>Contact us</a
+						>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<link rel='stylesheet' href='{% static 'styles/videoupload.css' %}'
+		type='text/css' type='text/css'> {% load static %}
+	</head>
+	<div class="container py-5" style="height: 1000px; padding-bottom: 50px">
+		<form method="POST" action="" enctype="multipart/form-data">
+			<h1 style="text-align: center">
+				Upload A Video Of 15 Minutes Watch-Time Or Less
+			</h1>
+			{% csrf_token %} {{ video_form.as_p }}
+			<button class="btn btn-primary" type="submit">Upload</button>
+		</form>
+	</div>
+	{% comment %} ---
+	<div>
+		{% for x in videoall %}
+		<div>
+			<h2 class="text-center" mt-2 mb-1>{{ x.User_ID }}</h2>
+			<h2 class="text-center" mt-2 mb-1>{{ x.Title }}</h2>
+			<h2 class="text-center" mt-2 mb-1>{{ x.Video_description }}</h2>
+			<video
+				class="embed-responsive embed-responsive-1b9"
+				controls="controls"
+				autoplay
+				loop
+				muted
+			>
+				<source src="{{ x.video.url}}" type="video/mp4" />
+			</video>
+		</div>
+		{% endfor %}
+	</div>
+	--- {% endcomment %}
+</html>

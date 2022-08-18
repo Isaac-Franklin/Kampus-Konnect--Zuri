@@ -1,0 +1,50 @@
+<!-- @format -->
+
+{% extends 'main.html' %} {% load static %}
+
+<!-- <html>
+  <body>
+    <p>Welcome To The Home Page</p>
+    <a href="{%url 'Home'%}">Return To The Sign Up Page</a>
+    <p>
+      Do not ve an account yet? <a href="{%url 'Signup'%}">click here</a> to
+      signup
+    </p>
+  </body>
+</html> -->
+
+{% block Links %}
+<link rel="stylesheet" href="{% static 'styles/home-video-grid-tabs.css' %}" />
+{% endblock %} {% block content %} {% comment %} MESSAGE START {% endcomment %}
+{% if messages %} {% for message in messages %}
+<div class="alert alert-{{ message.tags}} m-0" role="alert">
+	<strong>{{ message }}</strong>
+</div>
+{% endfor %} {% endif %} {% comment %} MESSAGE END {% endcomment %}
+<div class="cover_space"></div>
+<div class="home_page_section_2">
+	<div class="home_page_section_2_introudction_line">
+		<h2>Recently Added</h2>
+		<p><a href="#">See all</a></p>
+	</div>
+</div>
+
+<div>
+	{% for x in videoall %}
+	<div class="videouploadsection" style="text-align: center">
+		<video style="width: 70%; height: 70%" controls preload autoplay>
+			<source src="{{ x.video.url}}" type="video/mp4" />
+		</video>
+		<div>
+			<h1 class="text-center" mt-2 mb-1>{{ x.Title }}</h1>
+		</div>
+
+		<div>
+			<p class="text-center" mt-2 mb-1>{{ x.Date_Time }}</p>
+		</div>
+
+		<h3 class="text-center" mt-2 mb-1>{{ x.Video_description }}</h3>
+	</div>
+	{% endfor %}
+</div>
+{% endblock content %}

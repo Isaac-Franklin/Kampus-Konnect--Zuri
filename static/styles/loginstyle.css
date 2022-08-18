@@ -1,0 +1,229 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    color: black;
+    
+}
+.navbar{
+    display: flex;
+    flex-direction: column;
+   
+    justify-content: space-between;
+    width: 20%;
+    list-style: none;
+    align-self: flex-end;
+    margin-right: 30px;
+    
+}
+.nav-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+    text-decoration: none;
+    list-style: none;
+    
+}
+
+.navind{
+    color: white;
+    text-decoration: none;
+}
+
+.bgimage{
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.4), rgba(0,0,0,0.9)), url(images/BG\ Image.png);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-image: url(images/BG\ Image.png); */
+}
+body>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+.center-container{
+    display: flex;
+    background-color: white;
+    width: 60%;
+    height: 85%;
+    justify-content: center; 
+    /* align-items: center;*/
+    margin-top: 15px;
+    line-height: 2em;
+    border-radius: 0.8em;
+}
+.second-center-container{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 70%;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    height: 85%;
+    
+    
+}
+.welcome{
+    font-size: 2em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0.6em;
+    
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.lowerdiv1{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+    padding-top: 1.1em;
+    justify-content: space-between;
+}
+.innerlowerdiv1{
+    width: 48%;
+    
+}
+.innerlowerdiv1>nav>button>img{
+width: 3em;
+align-items: center;
+justify-content: center;
+}
+
+.innerlowerdiv2{
+    width: 48%;
+    float: right;
+}
+.innerlowerdiv2>nav>button>img{
+    width: 3em;
+    align-items: center;
+    justify-content: center;
+    }
+
+   
+.buttonnav{
+    display: flex;
+    width: 100%;
+    height: 3em;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    padding-right: 2em;
+    border-radius: 0.5em;
+    border: 1px solid black;
+}
+
+.middlediv{
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid black; */
+    justify-content: space-between;
+    margin-top: 1em;
+    
+}
+.forgotpassword{
+    text-decoration: none;
+    color: rgb(12, 76, 129);
+}
+#html{
+    border: 1px solid black;
+}
+.lowerdiv{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    /* background-color: green; */
+    align-items: center;
+    
+}
+hr{
+    border: 3px solid black;
+}
+.navbtn1{
+    width: 100%;
+    
+}
+.loginbtn{
+    width: 100%;
+    background-color: rgb(12, 76, 129);
+    border: 0;
+    border-radius: 4px;
+    height: 2em;
+    color: white;
+    cursor: pointer;
+    height: 3em;
+    margin-top: 1em;
+}
+
+/* .lowerdiv2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5em;
+    
+} */
+
+.lowerdiv2{
+    margin-top: 1em;
+}
+.signup{
+    display: inline;
+    text-decoration: none;
+    
+}
+
+.signup > .signuplink{
+    text-decoration: none;
+    color: rgb(12, 76, 129);
+    cursor: pointer;
+}
+#email{
+    height: 2em;
+    font-size: 0.2;
+    margin-bottom: 1em;
+}
+#password{
+    height: 2em;
+}
+
+.or {
+   
+    margin: 00px auto;
+    text-align: center;
+    position: relative;
+  }
+  .or:before {
+    content: "";
+    display: block;
+    width: 195px;
+    height: 1px;
+    background: black;
+    left: 0;
+    top: 50%;
+    position: absolute;
+    margin-left: 2em;
+  }
+  .or:after {
+    content: "";
+    display: block;
+    width: 195px;
+    height: 1px;
+    background: black;
+    right: 0;
+    top: 50%;
+    position: absolute;
+    margin-right: 1.7em;
+  }
+  

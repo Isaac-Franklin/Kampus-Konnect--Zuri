@@ -1,0 +1,92 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verification1</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel='stylesheet' href='{% static 'styles/videoupload.css' %}' type='text/css'
+    type='text/css'> {% load static %}
+  </head>
+  <body>
+    <div class="container py-5">
+      {% comment %} {% load static %} {% endcomment %}
+      <div class="container1b">
+        <div>
+          <img
+            src="{% static 'styles/images/Frame 2.png' %}"
+            alt="Kampus Konnect Logo"
+          />
+        </div>
+        <div class="container1binner">
+          <p>
+            <a href="{% url 'Home'%}" style="color: white; text-decoration: none"
+              >Home</a
+            >
+          </p>
+          <p>
+            <a href="{% url 'comment'%}" style="color: white; text-decoration: none"
+              >Contact us</a
+            >
+          </p>
+        </div>
+      </div>
+      <form method="POST" action="">
+        <div class="container1">
+          <h1 class="formheader" style = "color: black; ">Identity Verification Stage 1</h1>
+        </div>
+        <p style = "color: black; ">
+          Hi {{ user.username }}!, To verify you’re a college student, you need to submit the requirement.
+          <p  style = "color: black; "><strong>Kindly Enter Your School Email Address First</strong></p>
+        </p>
+        <div id="flash">
+          {% if messages %} {% for message in messages %}
+          <div class="alert alert-{{ message.tags}} m-0" role="alert">
+            <strong>{{ message }}</strong>
+          </div>
+          {% endfor %} {% endif %}
+        </div>
+        <div>
+          <div id="flash">
+            {% if messages %} {% for message in messages %}
+            <div class="alert alert-{{ message.tags}} m-0" role="alert">
+              <strong>{{ message }}</strong>
+            </div>
+            {% endfor %} {% endif %}
+          </div>
+          {% csrf_token %} {% comment %}
+          <img
+            class="veri2img"
+            style="width: 20px"
+            src="{% static 'images/Vector33.png' %}"
+          />
+          {% endcomment %} {{ validation2_form.as_p }}
+          <button class="schoolid veri2img" type="submit" style="display: flex">
+            {% comment %}
+            <img style="width: 20px" src="{% static 'images/Vector22.png' %}" />
+            {% endcomment %}
+            <p>Click Here Upload School ID</p>
+          </button>
+          {% comment %}
+          <div class="schoolemail" style="display: flex">
+            <img src="{% static 'images/Vector33.png' %}" />
+            School Email
+          </div>
+          {% endcomment %}
+        </div>
+        {% comment %}
+        <button class="btn btn-primary" type="submit">Continue</button><br />
+        {{ form.errors }} {% endcomment %}
+        <br />
+      </form>
+    </div>
+  </body>
+</html>

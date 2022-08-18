@@ -1,0 +1,70 @@
+<!-- @format -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Library</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+			crossorigin="anonymous"
+		/>
+		<link rel='stylesheet' href='{% static 'styles/stylesheet1.css' %}'
+		type='text/css' type='text/css'> {% load static %}
+	</head>
+	<body>
+		<div class="container1b" style="padding: 40px">
+			<div>
+				<a href="{% url 'Home' %}"
+					><img
+						src="{% static 'styles/images/Frame 2.png' %}"
+						alt="Kampus Konnect Logo"
+				/></a>
+			</div>
+			<div class="container1binner">
+				<p>Welcome To Your Library</p>
+				<p>
+					<a href="{% url 'Home'%}" style="color: white; text-decoration: none"
+						>Home</a
+					>
+				</p>
+				<p>
+					<a href="{% url 'Home'%}" style="color: white; text-decoration: none"
+						>Contact us</a
+					>
+				</p>
+			</div>
+		</div>
+
+		<div>
+			{% for x in videoall %}
+			<div class="videouploadsection" style="text-align: center">
+				<video style="width: 70%; height: 70%" controls preload autoplay>
+					<source src="{{ x.video.url}}" type="video/mp4" />
+				</video>
+				<div>
+					<h1 style="color: white" class="text-center" mt-2 mb-1>
+						{{ x.Title }}
+					</h1>
+				</div>
+
+				<div>
+					<p class="text-center" mt-2 mb-1>{{ x.Date_Time }}</p>
+				</div>
+
+				<h3 style="color: white" class="text-center" mt-2 mb-1>
+					{{ x.Video_description }}
+				</h3>
+			</div>
+			{% endfor %}
+		</div>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
